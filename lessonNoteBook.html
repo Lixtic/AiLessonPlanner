@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">Ai Lesson Planner </div>
+          <ul class="nav-links">
+            <li><a href="#" id="noteCreatorLink">Note Creator</a></li>
+            <li><a href="#" id="notesLink">Notes</a></li>
+            <li><a href="#" id="userLink">User</a></li>
+            <li><a href="#" id="signInLink">Sign In</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>
+    <div class="container">
+      
+        <form id="lesson-form">
+            <table>
+                <caption>Ai Lesson Planner</caption>
+                <caption>Weekly Lesson Plan</caption>
+                <caption>WEEK <span>
+                    <select name="week" id="weekSelect">
+                        <option value="WEEK 1">WEEK 1</option>
+                        <option value="WEEK 2">WEEK 2</option>
+                        <option value="WEEK 3">WEEK 3</option>
+                        <option value="WEEK 4">WEEK 4</option>
+                        <option value="WEEK 5">WEEK 5</option>
+                        <option value=" WEEK6">WEEK 6</option>
+                        <option value="WEEK 7">WEEK 7</option>
+                        <option value="WEEK 9">WEEK 9</option>
+                        <option value="WEEK 10">WEEK 10</option>
+                        <option value="WEEK 11">WEEK 11</option>
+                        <option value="WEEK 12">WEEK 12</option>
+
+                </select></span></caption>
+                <tr>
+                    <th>
+                        Week Ending:  <span>
+                            <input type="date" id="lesson-date" required>
+                        </span>
+                    </th>
+                    <th>
+                        DAY:  <span>
+                                <select name="" id="day">
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                </select>
+                        </span>
+                    </th>
+                    <th>
+                        Subject:  <span>
+                            <select name="" id="subject">
+                                <option value="ICT">ICT</option>
+                                <option value="MATHEMATICS">MATHEMATICS</option>
+                                <option value="ENGLISH LANGUAGE">ENGLISH LANGUAGE</option>
+                                <option value="SCIENCE">SCIENCE</option>
+                            </select>
+                        </span>
+                    </th>
+ 
+                </tr>
+                <tr>
+                    <th colspan="2">Duration:
+                        <span>
+                            <input type="text" name="duration" id="duration">
+                        </span>
+                    </th>
+                    <th>
+                        Strand <span>
+                            <input type="text" name="strand" id="strand">
+                        </span>
+                    </th>
+                    
+                </tr>
+                <tr>
+                    <th>Class <span>
+                        <select name="class" id="className">
+                            <option value="Form 1"> Form One</option>
+                            <option value="Form 2">Form Two</option>
+                            <option value="Form 3">Form Three</option>
+                        </select>
+                    </span></th>
+
+                    <th>Class Size <span>
+                        <input type="text" name="class_size" id="classSize">
+                    </span></th>
+
+                    <th>Sub Strand
+                        <span><input type="text" name="sub_strand" id="subStrand"></span>
+                    </th>
+
+                </tr>
+                <tr>
+                    <th>Contend standard <span>
+                        <input type="text" name="content_standard" id="contentStandard">
+                    </span></th>
+                    <th>Indicator <span><input type="text" name="indicator" id="indicator"></span></th>
+                    <th>Learning Outcome <span> 
+                        <input type="text" id="learning-outcome" placeholder="Lesson Title" required>
+                    </span></th>
+                </tr>
+                <tr>
+                    <th  rowspan="4">
+                        Phase Duration  <span>
+                            <textarea  id="phase-duration" placeholder=" Phase Duration" required></textarea>
+
+                        </span>
+                    </th>
+                    <th>Learners Activities 
+                        <span>
+                            <textarea id="learners-activities" placeholder="Learners Activities " required></textarea>
+
+                        </span>
+                    </th>
+                    <th>Resources
+                        <span>
+                            <textarea id="resources" placeholder="Resources" required></textarea>
+
+                        </span>
+                    </th>
+                </tr>
+                
+            </table>
+            
+          
+            <textarea id="lesson-content" placeholder="Lesson Content" required></textarea>
+            <button type="submit">Add Lesson</button>
+        </form>
+        <div id="lessons-list">
+      
+        </div>
+    </div>
+    <style>
+       
+    </style>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Note</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ai Lesson Planner </div>
+            <ul class="nav-links">
+              <li><a href="#" id="noteCreatorLink">Note Creator</a></li>
+              <li><a href="#" id="notesLink">Notes</a></li>
+              <li><a href="#" id="userLink">User</a></li>
+              <li><a href="#" id="signInLink">Sign In</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        
+        <div class="container" id="lessons-list">
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script> 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            let lessons = JSON.parse(localStorage.getItem('lessons')) || [];
+
+     
+            const noteTitleElement = document.getElementById('noteTitle');
+            const noteContentElement = document.getElementById('noteContent');
+
+         
+            if (lessons && lessons.length > 0) {
+                const firstNote = lessons[0]; 
+
+                if (firstNote) {
+                    noteTitleElement.textContent = firstNote.title || 'Untitled';
+                    noteContentElement.textContent = firstNote.content || 'No content available';
+                }
+            } else {
+                
+                noteTitleElement.textContent = 'No notes found';
+                noteContentElement.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
