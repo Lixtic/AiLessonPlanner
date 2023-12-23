@@ -191,20 +191,20 @@ burger.addEventListener('click', () => {
 
 // Function to perform an action when 'Note Creator' link is clicked
 document.getElementById('noteCreatorLink').addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent default link behavior (for '#' in href)
-  // Add your functionality here for 'Note Creator'
+  event.preventDefault(); 
+
   console.log('Note Creator link clicked!');
-  // You can perform actions like showing a section or executing specific code.
+  
 });
 
 // Function to perform an action when 'Notes' link is clicked
 document.getElementById('notesLink').addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent default link behavior (for '#' in href)
+  event.preventDefault(); 
   window.location.href = 'note.html';
   console.log('Notes link clicked!');
 });
 
-// Similarly, add functionality for 'User' and 'Sign In' links
+
 document.getElementById('userLink').addEventListener('click', (event) => {
   event.preventDefault();
   console.log('User link clicked!');
